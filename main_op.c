@@ -1,9 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 int plus_op(int a, int b);
 int minus_op(int a, int b);
+int der_op(int a, int b);
+int mul_op(int a, int b);
+int square_op(int a, int b);
 
 int main(void)
 {
@@ -41,6 +45,47 @@ int main(void)
     minus_op(a, b);
 
     return 0;
+  }
+
+  // (advanced options)
+  else if (val == 'a')
+  {
+    char val2;
+    printf("advanced options:\n"
+           "- derivative (d)\n"
+           "- multiplication (m)\n"
+           "- square (s)\n"
+           "what option to choose? (or get back to first menu pressing 'c'): ");
+    scanf("%c", &val2);
+
+    // derivative
+    if (val2 == 'd')
+    {
+      printf("(d)enter two digits separate: ");
+      scanf("%d %d", &a, &b);
+
+      der_op(a, b);
+      return 0;
+    }
+    
+    // multiplication
+    else if (val2 == 'm')
+    {
+      printf("(m)enter two digits separate: ");
+      scanf("%d %d", &a, &b);
+
+      mul_op(a, b);
+      return 0;
+    }
+
+    // square
+    else if (val2 == 's')
+    {
+      printf("(s)enter two digits separate: ");
+      scanf("%d %d", &a, &b);
+
+      square_op(a, b);
+    }
   }
 
   else
@@ -81,4 +126,31 @@ int minus_op(int a, int b)
 
     printf("your answer is: %d\n", mis);
   }
+}
+
+// declare derivative operator
+int der_op(int a, int b)
+{
+  int der;
+
+  der = a / b;
+  printf("answer is: %f\n", der);
+}
+
+// declare multiplication operator
+int mul_op(int a, int b)
+{
+  int mul;
+
+  mul = a * b;
+  printf("answer is: %d\n", mul);
+}
+
+//square operator
+int square_op(int a, int b)
+{
+  int sq;
+
+  sq = pow(double(a), double(b));
+  printf("answer is: %d\n", sq);
 }
