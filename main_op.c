@@ -12,7 +12,7 @@ int main(void)
 
   // приветствие и выбор оператора калькулятора
   // advance options in development
-  printf("welcome to calculatorC! select the operator (+, -): "
+  printf("welcome to calculatorC! select the operator (+, -); "
 "or you can choose more advance options (a): ");
   
   // определение переменной, в которую будет заноситься значение + или -
@@ -26,7 +26,8 @@ int main(void)
     // сканируются а и б, затем вызывается функция plus_op
     printf("(+)enter two digits with enter: ");
     scanf("%d %d", &a, &b);
-    
+
+    printf("\n");
     plus_op(a, b);
 
     return 0;
@@ -38,6 +39,7 @@ int main(void)
     printf("(-)enter two digits with enter: ");
     scanf("%d %d", &a, &b);
 
+    printf("\n");
     minus_op(a, b);
 
     return 0;
