@@ -11,17 +11,16 @@ int square_op(int a, int b);
 
 int main(void)
 {
-  // в самом начале назначаю две переменные для их счета
+  // declare variables
   int a, b;
-  char val2;
+  char val, val2;
 
   // приветствие и выбор оператора калькулятора
   // advance options in development
   printf("welcome to calculatorC! select the operator (+, -): "
 "or you can choose more advance options (a): ");
   
-  // определение переменной, в которую будет заноситься значение + или -
-  char val;
+  // input for val
   scanf("%c", &val);
 
   printf("\n");
@@ -34,8 +33,6 @@ int main(void)
     scanf("%d %d", &a, &b);
     
     plus_op(a, b);
-
-    return 0;
   }
 
   // в противном случае вызывается функйия minus_op
@@ -45,8 +42,6 @@ int main(void)
     scanf("%d %d", &a, &b);
 
     minus_op(a, b);
-
-    return 0;
   }
 
   // (advanced options)
@@ -61,8 +56,6 @@ int main(void)
       scanf("%d %d", &a, &b);
 
       der_op(a,b);
-
-      return 0;
     }
     
     // multiplication
@@ -72,8 +65,6 @@ int main(void)
       scanf("%d %d", &a, &b);
 
       mul_op(a, b);
-
-      return 0;
     }
 
     // square
@@ -83,8 +74,6 @@ int main(void)
       scanf("%d %d", &a, &b);
 
       square_op(a, b);
-
-      return 0;
     }
     return 0;
   }
@@ -104,6 +93,8 @@ int plus_op(int a, int b)
 
   sum = a + b;
   printf("answer is: %d\n", sum);
+  
+  return 0;
 }
 
 // определение функции вычитания
@@ -120,12 +111,14 @@ int minus_op(int a, int b)
     mis = a - b;
 
     printf("answer is: %d\n", mis);
+    return 0;
   }
   else
   {
     mis = b - a;
 
     printf("answer is: %d\n", mis);
+    return 0;
   }
 }
 
@@ -147,6 +140,7 @@ int mul_op(int a, int b)
 
   mul = a * b;
   printf("answer is: %d\n", mul);
+  return 0;
 }
 
 //square operator
@@ -156,4 +150,5 @@ int square_op(int a, int b)
 
   sq = pow(a, b);
   printf("answer is: %d\n", sq);
+  return 0;
 }
