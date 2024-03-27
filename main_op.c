@@ -47,7 +47,11 @@ int main(void)
   // (advanced options)
   else if (val == 'a')
   {
-    printf("advance: ");
+    printf("advance options:\n"
+    "- division (d);\n"
+    "- multiplication (m);\n"
+    "- square (s);\n"
+    "what to choose?: ");
     scanf(" %c", &val2);
     // derivative
     if (val2 == 'd')
