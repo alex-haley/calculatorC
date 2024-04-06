@@ -19,11 +19,9 @@ int main(void)
   // advance options in development
   printf("welcome to calculatorC! select the operator (+, -); "
 "or you can choose more advance options (a): ");
-  
-  // input for val
-  scanf("%c", &val);
 
-  printf("\n");
+scanf("%c", &val);
+printf("\n");
 
   // функция если val = +
   if (val == '+')
